@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <display-name>QuanLyBanHang</display-name>
+    <listener>
+    <listener-class>listener.AppContextListener</listener-class>
+</listener>
+
+    <!-- Configurations for Servlets -->
+    <servlet>
+        <servlet-name>ThongKeNhaCungCapServlet</servlet-name>
+        <servlet-class>servlet.ThongKeNhaCungCapServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ThongKeNhaCungCapServlet</servlet-name>
+        <url-pattern>/ThongKeNhaCungCapServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChiTietNhapHangServlet</servlet-name>
+        <servlet-class>servlet.ChiTietNhapHangServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChiTietNhapHangServlet</servlet-name>
+        <url-pattern>/ChiTietNhapHangServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChiTietHoaDonNhapServlet</servlet-name>
+        <servlet-class>servlet.ChiTietHoaDonNhapServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChiTietHoaDonNhapServlet</servlet-name>
+        <url-pattern>/ChiTietHoaDonNhapServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome file configurations -->
+    <welcome-file-list>
+        <welcome-file>GDQuanLy315.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
